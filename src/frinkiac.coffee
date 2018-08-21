@@ -102,7 +102,7 @@ module.exports = (robot) ->
     axios(getRequestConfig(franchise, 'search', {q: query[0]}))
       .then (response) ->
         if (response.data.length)
-          frame = Math.floor(Math.random() * response.data.length)
+          frame = Math.floor(Math.random() * 4)
           episode = response.data[frame].Episode
           timestamp = response.data[frame].Timestamp
 
